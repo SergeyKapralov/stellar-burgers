@@ -16,22 +16,18 @@ export const BurgerIngredient: FC<TBurgerIngredientProps> = memo(
     const orderIngredients = useSelector((state) => state.order.ingredients);
 
     const handleAdd = () => {
-      if (orderIngredients.find((item) => item._id === ingredient._id)) {
-        // Уже есть такой ингредиент — ничего не делаем
-        return;
-      }
       if (ingredient.type === 'bun') {
         dispatch(
           setBun({
             ...ingredient,
-            id: uuidv4() // локальный уникальный id для работы с UI
+            id: uuidv4()
           })
         );
       } else {
         dispatch(
           addIngredient({
             ...ingredient,
-            id: uuidv4() // локальный уникальный id для работы с UI
+            id: uuidv4()
           })
         );
       }
