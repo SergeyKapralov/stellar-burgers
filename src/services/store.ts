@@ -11,7 +11,7 @@ import {
   useSelector as selectorHook
 } from 'react-redux';
 
-const rootReducer = {
+export const rootReducer = {
   ingredients: ingredientsReducer,
   user: userReducer,
   order: orderReducer,

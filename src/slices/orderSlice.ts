@@ -86,7 +86,7 @@ const constructorSlice = createSlice({
   }
 });
 
-// 🎯 Экшены
+// Экшены
 export const {
   setBun,
   addIngredient,
@@ -97,7 +97,7 @@ export const {
   clearOrderModal
 } = constructorSlice.actions;
 
-// 🎯 Селекторы
+// Селекторы
 
 export const selectBunItems = (state: RootState) => state.order.bun;
 
